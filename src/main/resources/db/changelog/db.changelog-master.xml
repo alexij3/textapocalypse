@@ -3,8 +3,25 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
-    <changeSet id="1" author="obuzilov">
-        <comment>Initial changeset with the schema of the database.</comment>
-        <sqlFile path="db/changelog/init-schema.sql"/>
+
+    <changeSet id="001-create-character-table" author="obuzilov">
+        <comment>Create character table.</comment>
+        <sqlFile path="db/changelog/character/001-create-character-table.sql"/>
     </changeSet>
+
+    <changeSet id="002-character-player-constraint" author="obuzilov">
+        <comment>Create FK constraint for player id.</comment>
+        <sqlFile path="db/changelog/character/002-character-player-constraint.sql"/>
+    </changeSet>
+
+    <changeSet id="001-create-location-table" author="obuzilov">
+        <comment>Create location table.</comment>
+        <sqlFile path="db/changelog/location/001-create-location-table.sql"/>
+    </changeSet>
+
+    <changeSet id="001-create-player-table" author="obuzilov">
+        <comment>Create player table.</comment>
+        <sqlFile path="db/changelog/player/001-create-player-table.sql"/>
+    </changeSet>
+
 </databaseChangeLog>
